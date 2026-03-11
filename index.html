@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto Portfolio Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar card">
+        <div>
+          <p class="tag">Dự án nổi bật</p>
+          <h1>Crypto Portfolio Dashboard</h1>
+          <p class="sidebar-text">
+            Bảng điều khiển danh mục crypto mô phỏng theo phong cách sản phẩm thực tế.
+          </p>
+        </div>
+
+        <nav class="menu">
+          <button class="menu-item active">Tổng quan</button>
+          <button class="menu-item">Danh mục</button>
+          <button class="menu-item">Giao dịch</button>
+          <button class="menu-item">Theo dõi</button>
+        </nav>
+
+        <div class="wallet-box">
+          <span>Ví đang kết nối</span>
+          <strong id="wallet-address">0x91fa...3b7d</strong>
+          <button id="refresh-data" class="secondary">Làm mới dữ liệu</button>
+        </div>
+      </aside>
+
+      <section class="main-content">
+        <header class="topbar card">
+          <div>
+            <p class="eyebrow">Tổng quan danh mục</p>
+            <h2>Xin chào ông chủ</h2>
+            <p class="muted">Theo dõi tài sản, hiệu suất và hoạt động gần đây trong một giao diện duy nhất.</p>
+          </div>
+          <div class="topbar-actions">
+            <input id="search-input" type="text" placeholder="Tìm mã coin, ví dụ BTC" />
+            <button id="add-watchlist">Thêm vào theo dõi</button>
+          </div>
+        </header>
+
+        <section class="stats-grid">
+          <article class="card stat-card highlight">
+            <span>Tổng tài sản</span>
+            <strong id="total-balance">0 USDT</strong>
+            <small id="portfolio-change">0% trong 24 giờ</small>
+          </article>
+          <article class="card stat-card">
+            <span>Số loại tài sản</span>
+            <strong id="asset-count">0</strong>
+            <small>Đang theo dõi trong danh mục</small>
+          </article>
+          <article class="card stat-card">
+            <span>Lãi / lỗ hôm nay</span>
+            <strong id="daily-pnl">0 USDT</strong>
+            <small>Biến động mô phỏng trong ngày</small>
+          </article>
+          <article class="card stat-card">
+            <span>Tài sản nổi bật</span>
+            <strong id="top-asset">-</strong>
+            <small id="top-asset-change">Chưa có dữ liệu</small>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <div class="card panel-large">
+            <div class="panel-header">
+              <h3>Danh mục tài sản</h3>
+              <span class="muted">Cập nhật mô phỏng theo thời gian thực</span>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Tài sản</th>
+                    <th>Số lượng</th>
+                    <th>Giá</th>
+                    <th>Giá trị</th>
+                    <th>24 giờ</th>
+                  </tr>
+                </thead>
+                <tbody id="portfolio-body"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="side-panels">
+            <div class="card">
+              <div class="panel-header">
+                <h3>Phân bổ tài sản</h3>
+                <span class="muted">Theo giá trị danh mục</span>
+              </div>
+              <div id="allocation-list" class="allocation-list"></div>
+            </div>
+
+            <div class="card">
+              <div class="panel-header">
+                <h3>Danh sách theo dõi</h3>
+                <span class="muted">Các coin ông chủ đang để ý</span>
+              </div>
+              <ul id="watchlist" class="watchlist"></ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-grid bottom-layout">
+          <div class="card">
+            <div class="panel-header">
+              <h3>Lịch sử giao dịch</h3>
+              <span class="muted">Mua, bán, hoán đổi và nhận token</span>
+            </div>
+            <ul id="transaction-list" class="transaction-list"></ul>
+          </div>
+
+          <div class="card insights-card">
+            <div class="panel-header">
+              <h3>Nhận xét nhanh</h3>
+              <span class="muted">Tóm tắt tự động</span>
+            </div>
+            <div id="insights" class="insights"></div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
