@@ -44,4 +44,5 @@ crypto-portfolio-dashboard/
 
 ## Gợi ý trưng bày trên GitHub
 
-Ông chủ nên chụp ảnh toàn bộ giao diện dashboard sau khi mở dự án, rồi thêm ảnh vào README để repo này trở thành repo nổi bật nhất trong hồ sơ.
+![Uploading Untitled.png…]()
+
