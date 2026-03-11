@@ -44,5 +44,6 @@ crypto-portfolio-dashboard/
 
 ## Gợi ý trưng bày trên GitHub
 
-![Uploading Untitled.png…]()
+<img width="1920" height="1040" alt="Untitled" src="https://github.com/user-attachments/assets/e599762a-b2f2-4541-9ebb-24f49c051fe5" />
+
 
